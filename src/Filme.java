@@ -8,6 +8,7 @@ public class Filme {
 	private String descricao;
 	private String genero;
 	private String duracaoFilme;
+	
 	private List<Filme> filmes = new ArrayList<>();
 	
 	public List<Filme> getFilmes() {

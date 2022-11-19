@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class MenuController {
 		
-		Filme filmes = new Filme();
+		
 		
 		
 		Scanner sc = new Scanner(System.in);
@@ -15,6 +15,7 @@ public class MenuController {
 		private int opc;
 		
 	public void menuFilmes() {
+		Filme filmes = new Filme();
 		Filme filme1 = new Filme();
 		Filme filme2 = new Filme();
 		Filme filme3 = new Filme();
@@ -96,25 +97,26 @@ public class MenuController {
 		System.out.print("SELECIONE O FILME: ");
 		opc = sc.nextInt();
 	
-		mostrarDadosFilme(opc);
+		mostrarDadosFilme(opc, filmes);
 		
 	}
 	
-	public void mostrarDadosFilme(int opc) {
+	public void mostrarDadosFilme(int opc, Filme filme) {
 		
-		System.out.println(filmes.getFilmes().get(opc - 1));
+		System.out.println(filme.getFilmes().get(opc - 1));
 		System.out.print("SELECIONAR ESTE FILME? (S/N): ");
 		String SN = sc.next();
 		if(SN.equals("s")) {
-			ingresso.setFilme(filmes.getFilmes().get(opc - 1).getNome());
+			ingresso.setFilme(filme.getFilmes().get(opc - 1).getNome());
 			selecionarSessoes();
 		}
-		else  {
+		else {
 			menuFilmes();
 		}
 	}
 	
 	public void selecionarSessoes() {
+		
 		ArrayList<String> arrSessoes = new ArrayList<>(Arrays.asList(
 	            "14:30",
 	            "15:00",
@@ -160,22 +162,6 @@ public class MenuController {
 		System.out.println("TOTAL A PAGAR: " + NumberFormat.getCurrencyInstance(new Locale("pt-BR", "BR")).format(totalIngressos));
 	}
 
-	/*public void selecionaFilme() {
-		 	
-		Scanner in = new Scanner(System.in);
-       
-        int opc;
-       
-        System.out.println("CINEMA 99\nCARTAZ");
-        
-        int i = 1;
-        for(String titulo : bilhete.getArr)
-        {
-            System.out.println(i++ + " - " + titulo);
-        }
-        System.out.print("OPÇÃO: ");
-        opc = in.nextInt();
-        bilhete.tituloFilme = bilhete.arrFilme.get(opc - 1);*/
 	
 }
 
