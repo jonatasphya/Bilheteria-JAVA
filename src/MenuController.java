@@ -1,18 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.Scanner;
 
 public class MenuController {
 		
-		
-		
-		
 		Scanner sc = new Scanner(System.in);
 		Ingresso ingresso = new Ingresso();
-		
-		private int opc;
 		
 	public void menuFilmes() {
 		Filme filmes = new Filme();
@@ -25,60 +21,60 @@ public class MenuController {
 		
 	    filme1.setNome("Duna");
 	    filme1.setDiretor("Denis Villeneuve");
-	    filme1.setDescricao("Paul Atreides é um jovem brilhante, "
-	    		+ "dono de um destino além de sua compreensão. "
-	    		+ "Ele deve viajar para o planeta mais perigoso "
-	    		+ "do universo para garantir o futuro de seu povo.");
+	    filme1.setDescricao("Paul Atreides é um jovem brilhante, \n"
+	    		+ "dono de um destino além de sua compreensão. \n"
+	    		+ "Ele deve viajar para o planeta mais perigoso \n"
+	    		+ "do universo para garantir o futuro de seu povo.\n");
 	    filme1.setGenero("Ficção científica/Aventura");
 	    filme1.setDuracaoFilme("2h 35m");
 	    //------
 	    filme2.setNome("Matrix");
 	    filme2.setDiretor("Lana Wachowski, Lilly Wachowski");
-	    filme2.setDescricao("Um jovem programador é atormentado "
-	    		+ "por estranhos pesadelos nos quais sempre está "
-	    		+ "conectado por cabos a um imenso sistema de computadores "
-	    		+ "do futuro. À medida que o sonho se repete, ele começa a "
-	    		+ "levantar dúvidas sobre a realidade. E quando encontra os "
-	    		+ "misteriosos Morpheus e Trinity, ele descobre que é vítima "
-	    		+ "do Matrix, um sistema inteligente e artificial que manipula "
-	    		+ "a mente das pessoas e cria a ilusão de um mundo real enquanto "
-	    		+ "usa os cérebros e corpos dos indivíduos para produzir energia.");
+	    filme2.setDescricao("Um jovem programador é atormentado \n"
+	    		+ "por estranhos pesadelos nos quais sempre está \n"
+	    		+ "conectado por cabos a um imenso sistema de computadores \n"
+	    		+ "do futuro. À medida que o sonho se repete, ele começa a \n"
+	    		+ "levantar dúvidas sobre a realidade. E quando encontra os \n"
+	    		+ "misteriosos Morpheus e Trinity, ele descobre que é vítima \n"
+	    		+ "do Matrix, um sistema inteligente e artificial que manipula \n"
+	    		+ "a mente das pessoas e cria a ilusão de um mundo real enquanto \n"
+	    		+ "usa os cérebros e corpos dos indivíduos para produzir energia.\n");
 	    filme2.setGenero("Ação/Ficção científica");
 	    filme2.setDuracaoFilme("2h 26m");
 	    //------
 	    filme3.setNome("Blade Runner 2049");
 	    filme3.setDiretor("Denis Villeneuve");
-	    filme3.setDescricao("Após descobrir um segredo que ameaça o que resta "
-	    		+ "da sociedade, um novo policial parte em busca de Rick Deckard, "
-	    		+ "que está desaparecido há 30 anos.");
+	    filme3.setDescricao("Após descobrir um segredo que ameaça o que resta \n"
+	    		+ "da sociedade, um novo policial parte em busca de Rick Deckard, \n"
+	    		+ "que está desaparecido há 30 anos.\n");
 	    filme3.setGenero("Ficção científica/Ação");
 	    filme3.setDuracaoFilme("2h 43m");
 	    //------
 	    filme4.setNome("K-PAX - O Caminho da Luz");
 	    filme4.setDiretor("Iain Softley");
-	    filme4.setDescricao("Misterioso paciente de um hospital psiquiátrico afirma "
-	    		+ "pertencer a um planeta distante chamado K-PAX. À medida que seu "
-	    		+ "psiquiatra tenta ajudá-lo, ele percebe que o possível alienígena "
-	    		+ "está causando um efeito extraordinário na saúde mental de outros "
+	    filme4.setDescricao("Misterioso paciente de um hospital psiquiátrico afirma \n"
+	    		+ "pertencer a um planeta distante chamado K-PAX. À medida que seu \n"
+	    		+ "psiquiatra tenta ajudá-lo, ele percebe que o possível alienígena \n"
+	    		+ "está causando um efeito extraordinário na saúde mental de outros \n"
 	    		+ "pacientes da instituição.");
 	    filme4.setGenero("Ficção científica/Drama");
 	    filme4.setDuracaoFilme("2h 1m");
 	    //------
 	    filme5.setNome("A Chegada");
 	    filme5.setDiretor("Denis Villeneuve");
-	    filme5.setDescricao("Naves alienígenas chegaram às principais cidades do mundo. "
-	    		+ "Com a intenção de se comunicar com os visitantes, uma linguista e um "
-	    		+ "militar são chamados para decifrar as estranhas mensagens dos visitantes.");
+	    filme5.setDescricao("Naves alienígenas chegaram às principais cidades do mundo. \n"
+	    		+ "Com a intenção de se comunicar com os visitantes, uma linguista e um \n"
+	    		+ "militar são chamados para decifrar as estranhas mensagens dos visitantes.\n");
 	    filme5.setGenero("Ficção científica/Thriller");
 	    filme5.setDuracaoFilme("1h 56m");
 	    //------
 	    filme6.setNome("Prometheus");
 	    filme6.setDiretor("Ridley Scott");
-	    filme6.setDescricao("Este prelúdio do filme Alien conta a história de "
-	    		+ "uma equipe de cientistas que embarca em uma jornada espacial "
-	    		+ "para descobrir a verdade sobre a origem da raça humana. "
-	    		+ "No planeta de destino, eles encontram criaturas poderosas "
-	    		+ "e revelações assustadoras.");
+	    filme6.setDescricao("Este prelúdio do filme Alien conta a história de \n"
+	    		+ "uma equipe de cientistas que embarca em uma jornada espacial \n"
+	    		+ "para descobrir a verdade sobre a origem da raça humana. \n"
+	    		+ "No planeta de destino, eles encontram criaturas poderosas \n"
+	    		+ "e revelações assustadoras.\n");
 	    filme6.setGenero("Ficção científica/Terror");
 	    filme6.setDuracaoFilme("2h 4m");
 	    
@@ -96,7 +92,7 @@ public class MenuController {
 		
 		System.out.print("SELECIONE O FILME: ");
 		opc = sc.nextInt();
-	
+		
 		mostrarDadosFilme(opc, filmes);
 		
 	}
@@ -106,7 +102,7 @@ public class MenuController {
 		System.out.println(filme.getFilmes().get(opc - 1));
 		System.out.print("SELECIONAR ESTE FILME? (S/N): ");
 		String SN = sc.next();
-		if(SN.equals("s")) {
+		if(SN.equals("s") || SN.equals("S")) {
 			ingresso.setFilme(filme.getFilmes().get(opc - 1).getNome());
 			selecionarSessoes();
 		}

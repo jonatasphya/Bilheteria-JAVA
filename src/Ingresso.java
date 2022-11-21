@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Ingresso {
@@ -38,8 +37,5 @@ public class Ingresso {
 		return "Ingresso [filme=" + filme + ", ingressoMeia=" + ingressoMeia + ", ingressoInteira=" + ingressoInteira
 				+ ", horarioSecao=" + horarioSecao + "]";
 	}
-	
-	
 
-	
 }
