@@ -97,7 +97,7 @@ public class MenuController {
 		
 	}
 	
-	public void mostrarDadosFilme(int opc, Filme filme) {
+	private final void mostrarDadosFilme(int opc, Filme filme) {
 		
 		System.out.println(filme.getFilmes().get(opc - 1));
 		System.out.print("SELECIONAR ESTE FILME? (S/N): ");
@@ -111,7 +111,7 @@ public class MenuController {
 		}
 	}
 	
-	public void selecionarSessoes() {
+	private final void selecionarSessoes() {
 		
 		ArrayList<String> arrSessoes = new ArrayList<>(Arrays.asList(
 	            "14:30",
@@ -138,7 +138,7 @@ public class MenuController {
 		selecionarIngressos();
 	}
 	
-	public void selecionarIngressos() {
+	private final void selecionarIngressos() {
 		System.out.println("QUANTAS ENTRADAS INTEIRAS (R$ 24,00)? ");
 		ingresso.setIngressoInteira(sc.nextInt());
 		System.out.println("QUANTAS ENTRADAS MEIAS (R$ 12,00)? ");
@@ -146,7 +146,7 @@ public class MenuController {
 		finalizaCompra(ingresso.getIngressoInteira(), ingresso.getIngressoMeia());
 	}
 	
-	public void finalizaCompra(int qtdInteira, int qtdMeia) {
+	private final void finalizaCompra(int qtdInteira, int qtdMeia) {
 		
 		double totalIngressos = (qtdInteira * 24.00) + (qtdMeia * 12.00);
 		
